@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply transition-colors duration-200;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  background: #fafafa;
+}
+
+body .dark {
+  background-color: #aa3d3d; /* Dark background color */
+  color: #fff; /* Light text color */
+}
+
+.dark-bg{
+  background: #000;
+  color: white;
+  border-color: rgb(36, 35, 35);
+  background: rgb(23, 23, 23);
+}
+
+.dark-fill path{
+  fill: white;
+}
+
+.range-field {
+  -webkit-appearance: none;
+  outline: none;
+  width: 100%;
+  height: 10px;
+  background: #f5f5f5;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.range-field::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.bg-purple::-webkit-slider-thumb {
+  background: #6160dc;
+  box-shadow: -410px 0 0 400px #6160dc;
+}
+
+.bg-blue::-webkit-slider-thumb {
+  background-color: #54c5eb;
+  box-shadow: -410px 0 0 400px #54c5eb;
+}
+
+.bg-orange::-webkit-slider-thumb {
+  background-color: #ffb74a;
+  box-shadow: -410px 0 0 400px #ffb74a;
+}
+
+.bg-red::-webkit-slider-thumb {
+  background-color: #ff4a55;
+  box-shadow: -410px 0 0 400px #ff4a55;
+}
+
+.custom-tooltip {
+  position: relative;
+  background-color: black;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.arrow-down {
+  position: absolute;
+  top: calc(100% - 1px); /* Adjusted the top property */
+  left: 50%;
+  margin-left: -5px; /* Half of the arrow width */
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid black;
+}

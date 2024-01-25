@@ -1,0 +1,98 @@
+.content-area-table {
+  .data-table-diagram {
+    table {
+      width: 100%;
+
+      td {
+        border-top: 1px solid #edf2f6;
+      }
+
+      td,
+      th {
+        padding: 14px 12px;
+        @media (max-width: 768px) {
+          font-size: 15px;
+          padding: 12px 10px;
+        }
+      }
+
+      thead {
+        text-align: left;
+        font-size: 17px;
+        background-color: var(--thead-bg-color);
+      }
+
+      .dt-cell-action {
+        text-align: center;
+      }
+
+      .dt-status {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 6px;
+        text-align: left;
+
+        .dt-status-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 100%;
+
+          &.dot-Paid {
+            background-color: #34caa5;
+          }
+          &.dot-Refund {
+            background-color: #ed544e;
+          }
+        }
+
+        .dt-status-Paid {
+          color: #34caa5;
+        }
+
+        .dt-status-Refund {
+          color: #ed544e;
+        }
+
+        .dt-status-text {
+          text-transform: capitalize;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .action-dropdown-btn {
+    position: relative;
+  }
+
+  .action-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    transform: translateX(50%);
+    height: auto;
+    min-width: 80px;
+    box-shadow: rgba(100, 100, 111, 0.1) 0px 1px 4px 0px;
+    background-color: var(--secondary-color);
+    padding: 6px 10px;
+    z-index: 1;
+    border-radius: 8px;
+    border: 1px solid var(--border-color-inverted);
+    text-align: left;
+  }
+
+  .dropdown-menu-item {
+    margin: 8px 0;
+  }
+
+  .dropdown-menu-link {
+    color: var(--text-color-inverted);
+    font-weight: 600;
+    transition: var(--default-transition);
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
