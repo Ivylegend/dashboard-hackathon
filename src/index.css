@@ -39,35 +39,33 @@ body .dark {
   color: white;
 }
 
-.slide-in{
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
   animation: slide-in ease-in-out;
   animation-duration: 500ms;
 }
 
-.slide-out{
-  animation: slide-out ease-in;
-}
-
-@keyframes slide-in {
-  from {
-    left: -100px;
-  }
-
-  to{
-    left: 0;
-  }
-}
 
 @keyframes slide-out {
-  100% {
-    opacity: 0;
-    left: 0;
-  }
-
   0% {
-    opacity: 1;
-    left: -100px;
+    transform: translateX(0);
   }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.slide-out {
+  animation: slide-out ease-in-out;
+  animation-duration: 500ms;
 }
 
 .range-field {

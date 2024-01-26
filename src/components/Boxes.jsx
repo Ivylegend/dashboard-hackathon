@@ -28,7 +28,7 @@ const trendBoxes = [
     trend: Red,
     arrow: trendDown,
     bg: "red-100",
-    color: "[#ED544E]",
+    color: "red-500",
   },
   {
     image: shoppingCart,
@@ -37,7 +37,7 @@ const trendBoxes = [
     trend: Red,
     arrow: trendDown,
     bg: "red-100",
-    color: "[#ED544E]",
+    color: "red-500",
   },
   {
     image: coin,

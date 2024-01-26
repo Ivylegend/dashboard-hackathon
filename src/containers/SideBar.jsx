@@ -38,7 +38,7 @@ const SideBar = ({ darkMode, setDarkMode, toggle }) => {
       className={`${
         darkMode && "bg-neutral-800 border-black"
       } min-h-[100vh] fixed w-20 py-[20px] px-0 ${
-        toggle && "hidden"
+        toggle ? "hidden" : "slide-in"
       } slide-in flex lg:flex flex-col justify-between items-center bg-[#F7F8FA] border-solid border-[1px] border-[#EBECF2] z-20 top-0 left-0`}
     >
       <div className="flex gap-[20px] cursor-pointer flex-col items-center w-full">
@@ -72,8 +72,8 @@ const SideBar = ({ darkMode, setDarkMode, toggle }) => {
                 data-tooltip-content={image.name}
                 data-tooltip-place="right"
                 className={`hover:border-r-4 ${
-                  activeItemId === image.name ? "border-r-4 border-black" : ""
-                } border-black w-[100%] flex items-center justify-center`}
+                  activeItemId === image.name ? "border-r-4 border-[#0D062D]" : ""
+                } border-[#0D062D] w-[100%] flex items-center justify-center`}
                 onClick={() => handleItemClick(image.name)}
               >
                 <img src={image.source} alt={image.name} />
@@ -99,8 +99,8 @@ const SideBar = ({ darkMode, setDarkMode, toggle }) => {
         />
         <span
           className={`hover:border-r-4 flex items-center w-full justify-center ${
-            activeItemId === "right" ? "border-r-4 border-black" : ""
-          } border-black`}
+            activeItemId === "right" ? "border-r-4 border-[#0D062D]" : ""
+          } border-[#0D062D]`}
           onClick={() => handleItemClick("right")}
         >
           <img
@@ -120,8 +120,8 @@ const SideBar = ({ darkMode, setDarkMode, toggle }) => {
         />
         <span
           className={`hover:border-r-4 flex items-center w-full justify-center ${
-            activeItemId === "settings" ? "border-r-4 border-black" : ""
-          } border-black`}
+            activeItemId === "settings" ? "border-r-4 border-[#0D062D]" : ""
+          } border-[#0D062D]`}
           onClick={() => handleItemClick("settings")}
         >
           <img
@@ -141,8 +141,8 @@ const SideBar = ({ darkMode, setDarkMode, toggle }) => {
         />
         <span
           className={`hover:border-r-4 flex items-center w-full justify-center ${
-            activeItemId === "logout" ? "border-r-4 border-black" : ""
-          } border-black`}
+            activeItemId === "logout" ? "border-r-4 border-[#0D062D]" : ""
+          } border-[#0D062D]`}
           onClick={() => handleItemClick("logout")}
         >
           <img
