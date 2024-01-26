@@ -19,7 +19,7 @@ const Navbar = ({ darkMode, setToggle }) => {
         <span
           className={`${
             darkMode && "dark-bg"
-          } w-[120px] h-[32px] flex items-center sm:h-[48px] px-[16px] gap-[8px] rounded-3xl border-solid border sm:w-[340px] border-[#DADDDD] bg-white`}
+          } w-[120px] group h-[32px] flex items-center sm:h-[48px] px-[16px] gap-[8px] rounded-3xl border-solid border sm:w-[340px] border-[#DADDDD] bg-white focus-within:border-violet-300`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -78,14 +78,14 @@ const Navbar = ({ darkMode, setToggle }) => {
         </span>
 
         {/* NOTIFICATION BELL */}
-        <span className="w-[40px] cursor-pointer h-[40px] rounded-full flex items-center justify-center border-solid border-[#DADDDD] border-[1px]">
+        <span className="w-[40px] group cursor-pointer h-[40px] rounded-full flex items-center justify-center border-solid border-[#DADDDD] border-[1px] focus-within:border-violet-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
             viewBox="0 0 20 20"
             fill="none"
-            className={darkMode && "dark-fill"}
+            className={`group-focus-within:text-violet-300 transition duration-300 ${darkMode && "dark-fill"}`}
           >
             <path
               fill-rule="evenodd"

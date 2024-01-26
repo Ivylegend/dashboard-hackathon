@@ -24,18 +24,18 @@ body .dark {
   color: #fff; /* Light text color */
 }
 
-.dark-bg{
+.dark-bg {
   background: #000;
   color: white;
   border-color: rgb(36, 35, 35);
   background: rgb(23, 23, 23);
 }
 
-.dark-fill path{
+.dark-fill path {
   fill: white;
 }
 
-.white{
+.white {
   color: white;
 }
 
@@ -52,7 +52,6 @@ body .dark {
   animation: slide-in ease-in-out;
   animation-duration: 500ms;
 }
-
 
 @keyframes slide-out {
   0% {
@@ -103,6 +102,16 @@ body .dark {
 .bg-red::-webkit-slider-thumb {
   background-color: #ff4a55;
   box-shadow: -410px 0 0 400px #ff4a55;
+}
+
+.green-bg {
+  background: rgba(52, 202, 165, 0.12);
+  color: #34caa5;
+}
+
+.red-bg {
+  background: rgba(237, 84, 78, 0.12);
+  color: #ed544e;
 }
 
 .custom-tooltip {

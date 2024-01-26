@@ -20,6 +20,7 @@ const trendBoxes = [
     arrow: trendUp,
     bg: "green-50",
     color: "[#34CAA5]",
+    bgColor: "green-bg",
   },
   {
     image: rotate,
@@ -29,6 +30,7 @@ const trendBoxes = [
     arrow: trendDown,
     bg: "red-100",
     color: "red-500",
+    bgColor: "red-bg",
   },
   {
     image: shoppingCart,
@@ -38,6 +40,7 @@ const trendBoxes = [
     arrow: trendDown,
     bg: "red-100",
     color: "red-500",
+    bgColor: "red-bg",
   },
   {
     image: coin,
@@ -47,6 +50,7 @@ const trendBoxes = [
     arrow: trendUp,
     bg: "green-50",
     color: "[#34CAA5]",
+    bgColor: "green-bg",
   },
 ];
 
@@ -79,10 +83,10 @@ const Boxes = ({ darkMode }) => {
             </div>
             <div className="flex justify-between items-center gap">
               <span
-                className={`flex items-center gap-1 bg-${box.bg} rounded-2xl p-1`}
+                className={`flex items-center gap-1 ${box.bgColor} rounded-2xl p-1`}
               >
                 <img src={box.arrow} alt="" />
-                <p className={`text-${box.color} text-[12px]`}>23.5%</p>
+                <p className={`text-[12px]`}>23.5%</p>
               </span>
               <p className="text-[#606060] text-[12px] font-normal">
                 vs. previous month
