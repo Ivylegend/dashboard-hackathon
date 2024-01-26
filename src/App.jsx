@@ -5,7 +5,7 @@ import SideBar from "./containers/SideBar";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
 
   const toggleDarkMode = () => {
     setDarkMode((prevDarkMode) => !prevDarkMode);

@@ -31,10 +31,16 @@ const SideBar = ({ darkMode, setDarkMode, toggle }) => {
     <div
       className={`${
         darkMode && "bg-neutral-800 border-black"
-      } min-h-[100vh] fixed w-20 py-[20px] px-0 ${toggle && "hidden slide-in"} lg:flex flex-col justify-between items-center bg-[#F7F8FA] border-solid border-[1px] border-[#EBECF2] z-20`}
+      } min-h-[100vh] fixed w-20 py-[20px] px-0 ${
+        toggle && "hidden slide-in"
+      } flex flex-col justify-between items-center bg-[#F7F8FA] border-solid border-[1px] border-[#EBECF2] z-20`}
     >
       <div className="flex gap-[20px] cursor-pointer flex-col items-center w-full">
-        <Tooltip place="right" id="my-tooltip" style={{borderRadius: "10px", fontSize:"12px"}} />
+        <Tooltip
+          place="right"
+          id="my-tooltip"
+          style={{ borderRadius: "10px", fontSize: "12px" }}
+        />
         <img
           data-tooltip-id="my-tooltip"
           data-tooltip-content="Logo"
@@ -45,7 +51,11 @@ const SideBar = ({ darkMode, setDarkMode, toggle }) => {
         {images.map((image, index) => {
           return (
             <>
-              <Tooltip place="right" id={image} style={{borderRadius: "10px", fontSize:"12px"}}/>
+              <Tooltip
+                place="right"
+                id={image}
+                style={{ borderRadius: "10px", fontSize: "12px" }}
+              />
               <span
                 key={index}
                 data-tooltip-id={image}
@@ -60,16 +70,16 @@ const SideBar = ({ darkMode, setDarkMode, toggle }) => {
         })}
 
         <div className="flex gap-[8px] flex-col items-center p-[8px] rounded-[100px] bg-white">
-          <img
-            src={light}
-            alt="light-mode"
-            onClick={() => setDarkMode()}
-          />
+          <img src={light} alt="light-mode" onClick={() => setDarkMode()} />
           <img src={dark} alt="dark-mode" onClick={() => setDarkMode()} />
         </div>
       </div>
       <div className="flex gap-[20px] flex-col items-center cursor-pointer w-full">
-        <Tooltip place="right" id="right" style={{borderRadius: "10px", fontSize:"12px"}} />
+        <Tooltip
+          place="right"
+          id="right"
+          style={{ borderRadius: "10px", fontSize: "12px" }}
+        />
         <span>
           <img
             src={Right}
@@ -80,7 +90,11 @@ const SideBar = ({ darkMode, setDarkMode, toggle }) => {
             className="hover:border-r-8 border-black"
           />
         </span>
-        <Tooltip place="right" id="settings" style={{borderRadius: "10px", fontSize:"12px"}}/>
+        <Tooltip
+          place="right"
+          id="settings"
+          style={{ borderRadius: "10px", fontSize: "12px" }}
+        />
         <span>
           <img
             src={settings}
@@ -91,7 +105,11 @@ const SideBar = ({ darkMode, setDarkMode, toggle }) => {
             className="hover:border-r-8 border-black"
           />
         </span>
-        <Tooltip place="right" id="logout" style={{borderRadius: "10px", fontSize:"12px"}}/>
+        <Tooltip
+          place="right"
+          id="logout"
+          style={{ borderRadius: "10px", fontSize: "12px" }}
+        />
         <span>
           <img
             src={logout}
