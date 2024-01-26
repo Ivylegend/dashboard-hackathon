@@ -38,7 +38,7 @@ const Navbar = ({ darkMode, setToggle }) => {
           <input
             type="text"
             placeholder="Search..."
-            className="text-[#A3A3A3] outline-none bg-transparent"
+            className="text-[#A3A3A3] outline-none bg-transparent w-full"
           />
         </span>
 
@@ -78,7 +78,7 @@ const Navbar = ({ darkMode, setToggle }) => {
         </span>
 
         {/* NOTIFICATION BELL */}
-        <span className="w-[40px] h-[40px] rounded-full flex items-center justify-center border-solid border-[#DADDDD] border-[1px]">
+        <span className="w-[40px] cursor-pointer h-[40px] rounded-full flex items-center justify-center border-solid border-[#DADDDD] border-[1px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -97,7 +97,7 @@ const Navbar = ({ darkMode, setToggle }) => {
         </span>
 
         {/* PROFILE */}
-        <div className="border-solid border-[#DADDDD] border-[1px] rounded-[38px] hidden lg:flex items-center justify-center py-[6px] px-[8px] gap-[12px] h-[48px]">
+        <div className="border-solid cursor-pointer border-[#DADDDD] border-[1px] rounded-[38px] hidden lg:flex items-center justify-center py-[6px] px-[8px] gap-[12px] h-[48px]">
           <span className="rounded-[19px]">
             <img src={ProfilePics} alt="profile-pics" className="w-full" />
           </span>
@@ -118,6 +118,7 @@ const Navbar = ({ darkMode, setToggle }) => {
               height="20"
               viewBox="0 0 20 20"
               fill="none"
+              className={`${darkMode && "dark-fill"}`}
             >
               <path
                 d="M3.19841 6.20675C3.43891 5.95614 3.81525 5.93336 4.08045 6.1384L4.15643 6.20675L10 12.2955L15.8436 6.20675C16.0841 5.95614 16.4604 5.93336 16.7256 6.1384L16.8016 6.20675C17.0421 6.45735 17.064 6.84951 16.8672 7.12585L16.8016 7.20502L10.479 13.7933C10.2385 14.0439 9.86217 14.0666 9.59697 13.8616L9.52099 13.7933L3.19841 7.20502C2.93386 6.92935 2.93386 6.48241 3.19841 6.20675Z"
@@ -126,6 +127,8 @@ const Navbar = ({ darkMode, setToggle }) => {
             </svg>
           </span>
         </div>
+
+        {/* MOBILE HAMBURGER MENU */}
         <div
           className="flex lg:hidden"
           onClick={() => {

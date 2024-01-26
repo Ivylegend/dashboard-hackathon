@@ -10,10 +10,10 @@ import {
   coin,
 } from "../assets";
 
-const bgColors = {
-  green: "rgb(52,202,165, 0.12)",
-  red: "rgb(237, 84, 78, 0.12)",
-};
+// const bgColors = {
+//   green: green-50,
+//   red: "rgb(237, 84, 78, 0.12)",
+// };
 
 const trendBoxes = [
   {
@@ -22,7 +22,8 @@ const trendBoxes = [
     number: 350,
     trend: Green,
     arrow: trendUp,
-    bg: "green",
+    bg: "green-50",
+    color: "[#34CAA5]",
   },
   {
     image: rotate,
@@ -30,7 +31,8 @@ const trendBoxes = [
     number: 270,
     trend: Red,
     arrow: trendDown,
-    bg: "red",
+    bg: "red-100",
+    color: "[#ED544E]",
   },
   {
     image: shoppingCart,
@@ -38,7 +40,8 @@ const trendBoxes = [
     number: 1567,
     trend: Red,
     arrow: trendDown,
-    bg: "green",
+    bg: "red-100",
+    color: "[#ED544E]",
   },
   {
     image: coin,
@@ -46,7 +49,8 @@ const trendBoxes = [
     number: "$350,000",
     trend: Green,
     arrow: trendUp,
-    bg: "red",
+    bg: "green-50",
+    color: "[#34CAA5]",
   },
 ];
 
@@ -76,9 +80,11 @@ const Boxes = ({ darkMode }) => {
               </p>
             </div>
             <div className="flex justify-between items-center gap">
-              <span className={`flex items-center gap-1 bg-${bgColors[box.bg]} rounded-2xl p-1`}>
+              <span
+                className={`flex items-center gap-1 bg-${box.bg} rounded-2xl p-1`}
+              >
                 <img src={box.arrow} alt="" />
-                <p className="text-[#34CAA5] text-[12px]">23.5%</p>
+                <p className={`text-${box.color} text-[12px]`}>23.5%</p>
               </span>
               <p className="text-[#606060] text-[12px] font-normal">
                 vs. previous month
