@@ -1,21 +1,25 @@
 import React from "react";
 import { ProfilePics } from "../assets";
+import { MdMenu } from "react-icons/md";
 
-const Navbar = ({ darkMode }) => {
+const Navbar = ({ darkMode, setToggle }) => {
   return (
     <div
       className={`${
         darkMode && "bg-neutral-800 border-b-black"
       } flex items-center z-10 justify-between p-[18px] bg-[#FAFAFA] w-[100%] border-b-[1px] border-b-[#E5EAEF] h-[88px] sticky top-0`}
     >
+      {/* TEXT */}
       <p className={`${darkMode && "text-white"} font-semibold text-lg`}>
         Dashboard
       </p>
-      <div className="flex justify-start items-center gap-4">
+      <div className="flex justify-start items-center gap-1 sm:gap-4">
+
+        {/* SEARCH BAR */}
         <span
           className={`${
             darkMode && "dark-bg"
-          } flex items-center h-[48px] px-[16px] gap-[8px] rounded-3xl border-solid border w-[340px] border-[#DADDDD] bg-white`}
+          } w-[120px] h-[32px] flex items-center sm:h-[48px] px-[16px] gap-[8px] rounded-3xl border-solid border sm:w-[340px] border-[#DADDDD] bg-white`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +41,9 @@ const Navbar = ({ darkMode }) => {
             className="text-[#A3A3A3] outline-none bg-transparent"
           />
         </span>
-        <span className="flex items-center justify-center px-[12px] py-[16px] gap-[8px] cursor-pointer">
+
+        {/* CALENDAR */}
+        <span className="flex items-center justify-center gap-[8px] cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -65,11 +71,13 @@ const Navbar = ({ darkMode }) => {
           <p
             className={`${
               darkMode && "text-white"
-            } text-[#26282C] text-[14px] font-medium`}
+            } text-[#26282C] text-[14px] font-medium hidden md:flex`}
           >
             November 15, 2023
           </p>
         </span>
+
+        {/* NOTIFICATION BELL */}
         <span className="w-[40px] h-[40px] rounded-full flex items-center justify-center border-solid border-[#DADDDD] border-[1px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -83,20 +91,24 @@ const Navbar = ({ darkMode }) => {
               fill-rule="evenodd"
               clip-rule="evenodd"
               d="M10.0001 1.04163C8.2872 1.04163 6.64449 1.72206 5.43332 2.93323C4.22215 4.1444 3.54172 5.7871 3.54172 7.49996V8.08663C3.54167 8.66737 3.36973 9.23511 3.04755 9.71829L2.09172 11.1541C0.980053 12.8208 1.82839 15.0858 3.76089 15.6125C4.39005 15.7841 5.02505 15.9291 5.66422 16.0483L5.66589 16.0525C6.30589 17.7625 8.01839 18.9583 10.0001 18.9583C11.9817 18.9583 13.6942 17.7625 14.3351 16.0525L14.3367 16.0483C14.9769 15.9292 15.6119 15.7838 16.2401 15.6125C18.1726 15.0858 19.0209 12.8208 17.9092 11.1541L16.9526 9.71829C16.6304 9.23511 16.4584 8.66737 16.4584 8.08663V7.49996C16.4584 5.7871 15.778 4.1444 14.5668 2.93323C13.3556 1.72206 11.7129 1.04163 10.0001 1.04163ZM12.8134 16.2808C10.9442 16.5041 9.05507 16.5041 7.18589 16.2808C7.77839 17.1316 8.80922 17.7083 10.0001 17.7083C11.1909 17.7083 12.2209 17.1316 12.8134 16.2808ZM4.79172 7.49996C4.79172 6.11862 5.34045 4.79386 6.31721 3.81711C7.29396 2.84036 8.61872 2.29163 10.0001 2.29163C11.3814 2.29163 12.7062 2.84036 13.6829 3.81711C14.6597 4.79386 15.2084 6.11862 15.2084 7.49996V8.08663C15.2084 8.91412 15.4534 9.72329 15.9126 10.4116L16.8692 11.8475C17.0175 12.0695 17.1108 12.3235 17.1415 12.5887C17.1722 12.8539 17.1393 13.1226 17.0457 13.3726C16.9521 13.6226 16.8004 13.8467 16.6031 14.0265C16.4057 14.2063 16.1685 14.3366 15.9109 14.4066C12.0407 15.4621 7.95855 15.4621 4.08839 14.4066C3.83103 14.3364 3.59403 14.206 3.39692 14.0263C3.19981 13.8465 3.04822 13.6225 2.95464 13.3727C2.86106 13.1228 2.82816 12.8544 2.85866 12.5893C2.88915 12.3243 2.98217 12.0703 3.13005 11.8483L4.08839 10.4116C4.54717 9.72303 4.79189 8.91406 4.79172 8.08663V7.49996Z"
-              fill= "#0D062D"
+              fill="#0D062D"
             />
           </svg>
         </span>
-        <div className="border-solid border-[#DADDDD] border-[1px] rounded-[38px] flex items-center justify-center py-[6px] px-[8px] gap-[12px] h-[48px]">
+
+        {/* PROFILE */}
+        <div className="border-solid border-[#DADDDD] border-[1px] rounded-[38px] hidden lg:flex items-center justify-center py-[6px] px-[8px] gap-[12px] h-[48px]">
           <span className="rounded-[19px]">
-            <img
-              src={ProfilePics}
-              alt="profile-pics"
-              className="w-full"
-            />
+            <img src={ProfilePics} alt="profile-pics" className="w-full" />
           </span>
           <span className="text flex items-end flex-col">
-            <p className={`${darkMode && "text-white"} text-[#26282C] font-medium`}>Justin Bergson</p>
+            <p
+              className={`${
+                darkMode && "text-white"
+              } text-[#26282C] font-medium`}
+            >
+              Justin Bergson
+            </p>
             <p className="text-[#787486] text-[14px]">Justin@gmail.com</p>
           </span>
           <span>
@@ -113,6 +125,17 @@ const Navbar = ({ darkMode }) => {
               />
             </svg>
           </span>
+        </div>
+        <div
+          className="flex lg:hidden"
+          onClick={() => {
+            setToggle();
+          }}
+        >
+          <MdMenu
+            style={{ width: "30px", height: "30px" }}
+            className={`${darkMode && "white"}`}
+          />
         </div>
       </div>
     </div>

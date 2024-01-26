@@ -52,14 +52,14 @@ const trendBoxes = [
 
 const Boxes = ({ darkMode }) => {
   return (
-    <div className="flex overflow-x-scroll md:overflow-x-hidden md:grid md:grid-cols-2 gap-4">
+    <div className="flex overflow-x-scroll lg:overflow-x-hidden lg:grid lg:grid-cols-2 gap-4">
       {trendBoxes.map((box, index) => {
         return (
           <div
             key={index}
             className={`${
               darkMode && "dark-bg"
-            } border-solid border p-4 border-[#EDF2F7] bg-white rounded-xl flex flex-col gap-4 min-w-[207px]`}
+            } border-solid border p-4 border-[#EDF2F7] bg-white rounded-xl flex flex-col gap-4 w-[222px]`}
           >
             <div className="flex items-center justify-between">
               <span className="rounded-full w-[40px] h-[40px] flex items-center justify-center border-solid border-[#E6E6E6] border">

@@ -24,19 +24,14 @@ const images = [
   { name: "info", source: info },
 ];
 
-const SideBar = ({ darkMode, setDarkMode }) => {
+const SideBar = ({ darkMode, setDarkMode, toggle }) => {
   const [activeId, setActiveId] = useState(false);
-  // const [darkMode, setDarkMode] = useState(false);
-
-  // const toggleDarkMode = () => {
-  //   setDarkMode((prevDarkMode) => !prevDarkMode);
-  // };
 
   return (
     <div
       className={`${
         darkMode && "bg-neutral-800 border-black"
-      } min-h-[100vh] fixed w-20 py-[20px] px-0 flex flex-col justify-between items-center bg-[#F7F8FA] border-solid border-[1px] border-[#EBECF2] z-20`}
+      } min-h-[100vh] fixed w-20 py-[20px] px-0 ${toggle && "hidden slide-in"} lg:flex flex-col justify-between items-center bg-[#F7F8FA] border-solid border-[1px] border-[#EBECF2] z-20`}
     >
       <div className="flex gap-[20px] cursor-pointer flex-col items-center w-full">
         <Tooltip place="right" id="my-tooltip" style={{borderRadius: "10px", fontSize:"12px"}} />
@@ -68,9 +63,9 @@ const SideBar = ({ darkMode, setDarkMode }) => {
           <img
             src={light}
             alt="light-mode"
-            onClick={() => setDarkMode(false)}
+            onClick={() => setDarkMode()}
           />
-          <img src={dark} alt="dark-mode" onClick={() => setDarkMode(true)} />
+          <img src={dark} alt="dark-mode" onClick={() => setDarkMode()} />
         </div>
       </div>
       <div className="flex gap-[20px] flex-col items-center cursor-pointer w-full">

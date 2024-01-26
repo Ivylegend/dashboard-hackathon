@@ -7,12 +7,20 @@ const Sales = ({ darkMode }) => {
     <div
       className={`${
         darkMode && "dark-bg"
-      } p-[20px] overflow-x-scroll md:overflow-hidden bg-white border-solid rounded-xl border-[1px] flex flex-col gap-[20px]`}
+      } p-[20px] bg-white border-solid rounded-xl border-[1px] flex flex-col gap-[20px]`}
     >
       <div className="flex justify-between items-center">
-        <p className={`${darkMode && "text-white"} text-[18px] font-semibold`}>Sales Trends</p>
+        <p className={`${darkMode && "text-white"} text-[18px] font-semibold`}>
+          Sales Trends
+        </p>
         <div className="text-[18px] flex items-center gap-4">
-          <p className={`${darkMode && "text-white"} text-[#3A3F51] font-medium text-[14px]`}>Short by :</p>
+          <p
+            className={`${
+              darkMode && "text-white"
+            } text-[#3A3F51] font-medium text-[14px]`}
+          >
+            Short by :
+          </p>
           <span className="border-solid border rounded-[20px] py-[6px] px-[12px] border-[#E1DFDF]">
             <select
               name=""
@@ -32,7 +40,9 @@ const Sales = ({ darkMode }) => {
           </span>
         </div>
       </div>
-      <Charts />
+      <div className="overflow-x-scroll lg:overflow-hidden">
+        <Charts />
+      </div>
     </div>
   );
 };

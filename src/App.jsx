@@ -5,10 +5,15 @@ import SideBar from "./containers/SideBar";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
   const toggleDarkMode = () => {
     setDarkMode((prevDarkMode) => !prevDarkMode);
   };
+
+  const toggleNavbar = () => {
+    setToggle((prevToggle) => !prevToggle);
+  }
 
   return (
     <div
@@ -16,8 +21,8 @@ function App() {
         darkMode && "bg-black"
       } flex items-start max-w-[100vw]`}
     >
-      <SideBar darkMode={darkMode} setDarkMode={toggleDarkMode} />
-      <Container darkMode={darkMode}/>
+      <SideBar toggle={toggle} darkMode={darkMode} setDarkMode={toggleDarkMode} />
+      <Container toggle={toggle} setToggle={toggleNavbar} darkMode={darkMode}/>
     </div>
   );
 }
