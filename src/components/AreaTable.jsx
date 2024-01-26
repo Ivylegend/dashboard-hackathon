@@ -50,8 +50,11 @@ const TABLE_DATA = [
 const AreaTable = ({darkMode}) => {
   return (
     <section className="content-area-table">
+      {/* TABLE COMPONENT */}
       <div className="data-table-diagram">
         <table>
+
+          {/* TABLE HEADERS */}
           <thead>
             <tr>
               {TABLE_HEADS?.map((th, index) => (
@@ -61,6 +64,8 @@ const AreaTable = ({darkMode}) => {
               ))}
             </tr>
           </thead>
+
+          {/* TABLE BODY */}
           <tbody>
             {TABLE_DATA?.map((dataItem) => {
               return (

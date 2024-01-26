@@ -10,10 +10,6 @@ import {
   coin,
 } from "../assets";
 
-// const bgColors = {
-//   green: green-50,
-//   red: "rgb(237, 84, 78, 0.12)",
-// };
 
 const trendBoxes = [
   {
@@ -57,6 +53,8 @@ const trendBoxes = [
 const Boxes = ({ darkMode }) => {
   return (
     <div className="flex w-[100%] overflow-x-scroll lg:overflow-x-hidden lg:grid lg:grid-cols-2 gap-4">
+
+      {/* BOXES */}
       {trendBoxes.map((box, index) => {
         return (
           <div

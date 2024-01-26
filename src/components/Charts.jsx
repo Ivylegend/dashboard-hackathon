@@ -10,10 +10,6 @@ import {
   Rectangle,
 } from "recharts";
 
-const colors = [
-  "linear-gradient(180deg, #34CAA5 0%, rgba(52, 202, 165, 0.00) 100%)",
-];
-
 const data = [
   {
     name: "Jan",
@@ -106,14 +102,8 @@ const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     const uv = payload[0].value;
 
-    // Calculate tooltip position dynamically based on the bar's position
-    // const position = {
-    //   top: `${(payload[0].payload.uv / 50000) * 100 - 10}%`,
-    //   left: "-48px",
-    // };
-
     return (
-      <div className="custom-tooltip" style={{ fontSize: "12px"}}>
+      <div className="custom-tooltip" style={{ fontSize: "12px" }}>
         <div className="arrow-down"></div>
         <p className="uv" style={{ color: "white" }}>{`$ ${uv}`}</p>
       </div>
@@ -148,11 +138,12 @@ const GradientBar = ({ fill, x, y, width, height }) => {
 
 export default function Charts() {
   return (
+    // BAR CHART
     <BarChart
       width={700}
       height={300}
       data={data}
-      style={{ position: "relative", cursor:"pointer" }}
+      style={{ position: "relative", cursor: "pointer" }}
     >
       <CartesianGrid strokeDasharray="3 3" vertical={false} />
       <XAxis
@@ -175,11 +166,12 @@ export default function Charts() {
         tick={<CustomYAxisTick />}
         tickCount={9}
         tickSize={0}
-        // ticks={["0", "5.000", "10.000", "20.000", "30.000", "40.000", "50.000"]}
         tickMargin={35}
         axisLine={false}
         domain={[0, 50.0]}
       />
+
+      {/* BAR CHART TOOLTIP */}
       <Tooltip
         cursor={{ fill: "transparent" }}
         wrapperStyle={{
@@ -189,10 +181,10 @@ export default function Charts() {
           left: "-48px",
           transform: "translate(-50%, -100%)",
           borderRadius: "10px",
-          cursor: "pointer"
+          cursor: "pointer",
         }}
         content={<CustomTooltip />}
-        />
+      />
       <Bar
         dataKey="uv"
         fill={"rgba(52, 202, 165, 0.30)"}

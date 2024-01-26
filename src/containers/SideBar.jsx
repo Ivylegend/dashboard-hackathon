@@ -42,6 +42,8 @@ const SideBar = ({ darkMode, setDarkMode, toggle }) => {
       } slide-in flex lg:flex flex-col justify-between items-center bg-[#F7F8FA] border-solid border-[1px] border-[#EBECF2] z-20 top-0 left-0`}
     >
       <div className="flex gap-[20px] cursor-pointer flex-col items-center w-full">
+
+        {/* SIDEBAR LOGO */}
         <Tooltip
           place="right"
           id="my-tooltip"
@@ -54,6 +56,8 @@ const SideBar = ({ darkMode, setDarkMode, toggle }) => {
           src={Logo}
           alt="logo"
         />
+
+        {/* SIDEBAR ICONS */}
         {images.map((image, index) => {
           return (
             <>
@@ -86,6 +90,8 @@ const SideBar = ({ darkMode, setDarkMode, toggle }) => {
       </div>
 
       <div className="flex gap-[20px] flex-col items-center cursor-pointer w-full">
+
+        {/* RETURN BUTTON */}
         <Tooltip
           place="right"
           id="right"
@@ -105,6 +111,8 @@ const SideBar = ({ darkMode, setDarkMode, toggle }) => {
             data-tooltip-place="right"
           />
         </span>
+
+        {/* SETTINGS BUTTON */}
         <Tooltip
           place="right"
           id="settings"
@@ -124,6 +132,8 @@ const SideBar = ({ darkMode, setDarkMode, toggle }) => {
             data-tooltip-place="right"
           />
         </span>
+
+        {/* LOGOUT BUTTON */}
         <Tooltip
           place="right"
           id="logout"

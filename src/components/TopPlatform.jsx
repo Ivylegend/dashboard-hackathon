@@ -1,6 +1,8 @@
 const TopPlatform = ({darkMode}) => {
   return (
     <div className={`${darkMode && "dark-bg"} border-solid w-[100%] h-[100%] overflow-hidden border p-4 border-[#EDF2F7] bg-white rounded-xl flex flex-col gap-[20px]`}>
+
+      {/* TOP PLATFORM */}
       <div className="flex justify-between items-center">
         <p className={`${darkMode && "text-white"} text-[#26282C] text-[18px] font-semibold`}>Top Platform</p>
         <p className="text-[#34CAA5] text-[18px] font-normal cursor-pointer">See All</p>

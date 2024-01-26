@@ -9,6 +9,8 @@ const Sales = ({ darkMode }) => {
         darkMode && "dark-bg"
       } p-[20px] bg-white border-solid rounded-xl border-[1px] flex flex-col gap-[20px]`}
     >
+      {/* SALES */}
+
       <div className="flex justify-between items-center">
         <p className={`${darkMode && "text-white"} text-[18px] font-semibold`}>
           Sales Trends
@@ -40,6 +42,8 @@ const Sales = ({ darkMode }) => {
           </span>
         </div>
       </div>
+
+      {/* SALES CHARTS */}
       <div className="overflow-x-scroll lg:overflow-hidden">
         <Charts />
       </div>
